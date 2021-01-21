@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <style>
     body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .search-area {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         font-family: Arial, sans-serif;
+        background: #eee;
+        height: calc(100vh);
+        width: 100%;
+
+    }
+
+    header {
+        display: flex;
+
     }
 
     ul {
         width: 100%;
         list-style-type: none;
-
         margin: 0;
         padding: 0;
     }
@@ -16,46 +33,67 @@
         display: inline;
     }
 
-    .right-align {
+    .right {
         text-align: right;
     }
 
-    .left-align {
+    .left {
         text-align: left;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        width: 100%;
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        background-color: rgb(245, 245, 245);
+        border-color: rgb(225,225,225);
+        border-width: 1px;
+        border-style: solid;
+
     }
 
     #user-photo {
         border-radius: 50%;
     }
 </style>
+
 <html>
+<body>
 <header>
-    <ul class="right-align">
+    <ul class="right">
         <li><a href="#">Gmail</a></li>        
         <li><a href="#">Images</a></li>  
         <li><a href="#"><img src="https://www.google.com.tw/intl/en/about/products?tab=wh"></a></li>
         <li><a href="#"><img id="user-photo" src="https://lh3.googleusercontent.com/ogw/ADGmqu9xRyrV1fSTf81F4_6SyVlZeul1lFMkzbreNamauZk=s32-c-mo"</a></li>
     </ul>
 </header>
-    <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo"><br>
-<input type="text" name="search"> <br>
-<button type="submit">Google Search</button>
-<button type="submit">I'm Feeling Lucky</button>
-<p>Google offered in: <a href="#">中文（繁體）</a></p>
+
+<div class="search-area">
+    <img id="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo"><br>
+    <input type="text" name="search"> <br>
+    <button type="submit">Google Search</button>
+    <button type="submit">I'm Feeling Lucky</button>
+    <p>Google offered in: <a href="#">中文（繁體）</a> </p>
+</div>
+
 <footer>
-    <p>Taiwan</p><br>
-    <ul class="left-align">
+    <p>Taiwan</p><br><hr>
+    <ul class="left">
         <li><a href="#">Advertising</a></li> 
         <li><a href="#">Business</a></li> 
         <li><a href="#">About </a></li>
         <li><a href="#">How Search Works</a></li> 
     </ul>
-    <ul class="right-align">
+    <ul class="right">
         <li><a href="#">Privacy</a></li>
         <li><a href="#">Terms</a></li>
         <li><a href="#">Settings</a></li>
     </ul>
     
 </footer>
-
+</body>
 </html>
